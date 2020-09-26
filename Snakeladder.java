@@ -4,5 +4,10 @@ public class Snakeladder{
 		
 		
 	}
+	public static double Snakeladderuc2()
+	{
+		int num =(int)( Math.floor(Math.random() * 10) % 7);
+		return num;
+	}
 	
 }
