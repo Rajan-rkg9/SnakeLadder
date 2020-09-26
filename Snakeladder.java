@@ -22,7 +22,7 @@ public class Snakeladder{
 			position = position + chance;
 		else if (check == 2)
 			position = position - chance;
-                return position;
+                return chance;
 	}
        public static void Snakeladderuc4()
 	{
@@ -31,8 +31,12 @@ public class Snakeladder{
 			int pos = Snakeladderuc3();
 			if (pos<0)
 				position = 0;
-				
+	                if (pos > 100)
+				Snakeladderuc5(pos);
 		}
 	}
-		
+		public static void Snakeladderuc5(double pos)
+			{
+		position = position - pos;		
+	}
 }
