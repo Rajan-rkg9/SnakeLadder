@@ -2,10 +2,10 @@ public class Snakeladder{
 	public static int position = 0;
 	public static void main(String[] args) {
 		System.out.println("Game starts at position 0");
-		
+	
 
 
-		int position=Snakeladderuc4();
+		twoPlayer();
 		
 	}
 	public static double Snakeladderuc2()
@@ -14,7 +14,7 @@ public class Snakeladder{
 		return num;
 	}
 		
-	public static void Snakeladderuc3()
+	public static int Snakeladderuc3()
 	{
 		int outcome = Snakeladderuc2();
 		int option =(int)( Math.floor(Math.random() * 10) % 3);
@@ -26,7 +26,8 @@ public class Snakeladder{
 		else if (option == 2)
 			position = position - outcome;
 
-                return position;
+                return  position;
+
 	}
        public static int Snakeladderuc4()
 	{
@@ -38,6 +39,36 @@ public class Snakeladder{
 				
 		}
 		return position;
->>>>>>> uc4
+
+	}
+	public static void twoPlayer() {
+		int term = 2; int check = 0;
+		System.out.println("Snake and Ladder game played with two players starting at position 0");
+		while(position_a < 100 && position_b < 100) {
+			int turn = term % 2;
+			if (turn == 0) {
+				term++;
+				do {
+					System.out.println("Player A at " + position_a);
+					position = position_a;
+					check = Snakeladderuc3();
+					position_a = position;
+				}while(check == 1 && position_a != 100);
+			}
+			
+			else {
+				term++;
+				do {
+					System.out.println("Player B at " + position_b);
+					position = position_b;
+					check = Snakeladderuc3();
+					position_b = position;
+				}while(check == 1 && position_b != 100);
+			}
+		}
+		if (position_a == 100)
+			System.out.println("Player A won !!!");
+		else
+			System.out.println("Player B won !!!");
 	}
 }
