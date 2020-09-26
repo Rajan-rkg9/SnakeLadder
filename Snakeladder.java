@@ -11,7 +11,7 @@ public class Snakeladder{
 		return num;
 	}
 		
-	public static void Snakeladderuc3()
+	public static int Snakeladderuc3()
 	{
 		int outcome = Snakeladderuc2();
 		int option =(int)( Math.floor(Math.random() * 10) % 3);
