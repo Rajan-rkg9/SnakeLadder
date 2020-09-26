@@ -2,7 +2,7 @@ public class Snakeladder{
 	public static int position = 0;
 	public static void main(String[] args) {
 		System.out.println("Game starts at position 0");
-		
+                int  pos=Snakeladderuc3();		
 		
 	}
 	public static double Snakeladderuc2()
@@ -14,14 +14,14 @@ public class Snakeladder{
 	public static void Snakeladderuc3()
 	{
 		int outcome = Snakeladderuc2();
-		int chance =(int)( Math.floor(Math.random() * 10) % 3);
+		int option =(int)( Math.floor(Math.random() * 10) % 3);
 		
-		/* 0 - not play  1 -ladder 2 - snake */
+		/* OPTION  --  0 - not play  1 -ladder 2 - snake */
 		
-		if (check == 1)
-			position = position + chance;
-		else if (check == 2)
-			position = position - chance;
+		if (option == 1)
+			position = position + outcome;
+		else if (option == 2)
+			position = position - outcome;
 	}
-	
+	return option;
 }
