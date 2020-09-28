@@ -1,5 +1,7 @@
 public class Snakeladder{
 	public static int position = 0;
+        public static int  position_a=0;
+        public static int position_b=0;
 	public static void main(String[] args) {
 		System.out.println("Game starts at position 0");
 	
